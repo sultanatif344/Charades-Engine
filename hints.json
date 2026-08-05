@@ -1,0 +1,234 @@
+{
+    "scenes": [
+        {
+            "scene_id": "dark_comedy_unlikely_bond",
+            "tags": [
+                "dark_comedy",
+                "satire",
+                "unlikely_bond",
+                "heartbreak"
+            ],
+            "coherence_anchors": [
+                "vulnerability hidden behind aggression or dark humor",
+                "threatening character deflects emotion through jokes they don't fully commit to",
+                "two broken things finding common ground without admitting it",
+                "moments of unexpected gentleness immediately undercut by something dark",
+                "self awareness about the absurdity of the situation"
+            ],
+            "elimination_criteria": [
+                "genuine unprovoked violence breaking an established bond",
+                "sentimental speech not undercut by humor",
+                "monster losing threatening edge entirely",
+                "modern slang in non-modern setting",
+                "romantic resolution that arrives too quickly"
+            ]
+        },
+        {
+            "scene_id": "atmospheric_horror_solo",
+            "tags": [
+                "psychological_horror",
+                "atmospheric_horror",
+                "solo_atmospheric"
+            ],
+            "coherence_anchors": [
+                "dread built through specific physical details not abstract description",
+                "character notices wrong small things before the big thing",
+                "silence and absence used as threat",
+                "body reacts before mind catches up",
+                "short sentences during peak tension"
+            ],
+            "elimination_criteria": [
+                "over explanation of the horror source",
+                "character monologues about their fear",
+                "comic relief breaking tension prematurely",
+                "generic phrases like a sense of dread filled the air",
+                "resolution that fully explains the mystery"
+            ]
+        },
+        {
+            "scene_id": "epic_fantasy_confrontation",
+            "tags": [
+                "epic_fantasy",
+                "dark_fantasy",
+                "confrontation",
+                "antagonist_theatrical",
+                "villain_philosophical"
+            ],
+            "coherence_anchors": [
+                "villain savors the moment before acting",
+                "philosophical exchange before or during combat",
+                "power demonstrated through restraint not action",
+                "hero defiance through words when outmatched physically",
+                "stakes established through specific loss not generic threat"
+            ],
+            "elimination_criteria": [
+                "villain monologues their full plan unprompted",
+                "hero wins through sudden power spike",
+                "combat described without tactical detail",
+                "modern idioms in medieval setting",
+                "villain becomes cartoonish or loses menace"
+            ]
+        },
+        {
+            "scene_id": "gruff_mentor_earned_respect",
+            "tags": [
+                "gruff_mentor",
+                "earned_respect",
+                "unlikely_bond",
+                "tough_love"
+            ],
+            "coherence_anchors": [
+                "respect shown through criticism that has raised standards",
+                "warmth expressed through practical action not words",
+                "mentor tests before trusting",
+                "student proves worth through competence not charm",
+                "banter that builds rather than tears down"
+            ],
+            "elimination_criteria": [
+                "mentor immediately opens up emotionally",
+                "student earns respect through speech alone",
+                "relationship jumps to warmth without friction",
+                "mentor becomes soft and encouraging without cause",
+                "conflict resolved through a single dramatic moment"
+            ]
+        },
+        {
+            "scene_id": "tolerant_partnership",
+            "tags": [
+                "tolerant_partnership",
+                "unconventional_duo",
+                "tough_love"
+            ],
+            "coherence_anchors": [
+                "characters disagree but function anyway",
+                "care expressed through practical intervention not sentiment",
+                "one character's stubbornness acknowledged without being fixed",
+                "silence between them carries weight not awkwardness",
+                "neither character fully validates the other"
+            ],
+            "elimination_criteria": [
+                "sudden emotional breakthrough resolving core tension",
+                "one character abandons their defining trait to please the other",
+                "excessive verbal affirmation between characters",
+                "conflict that disappears without acknowledgment",
+                "pedestal syndrome - one character treating the other as infallible"
+            ]
+        },
+        {
+            "scene_id": "unreliable_narrator_journal",
+            "tags": [
+                "unreliable_narrator",
+                "journal_entry",
+                "document_format",
+                "political_drama",
+                "guilt"
+            ],
+            "coherence_anchors": [
+                "writer records observations that contradict their stated worldview",
+                "justifications that reveal more than they conceal",
+                "clinical detachment from emotionally heavy content",
+                "to-do items and logistics appearing after morally heavy admissions",
+                "sentences trailing off or cutting out under emotional weight"
+            ],
+            "elimination_criteria": [
+                "writer explicitly acknowledges their own bias",
+                "emotional outpouring inconsistent with established voice",
+                "clean resolution or moral clarity",
+                "modern therapeutic language",
+                "fourth wall awareness of being read"
+            ]
+        },
+        {
+            "scene_id": "mother_child_domestic",
+            "tags": [
+                "mother_child",
+                "protective_parent",
+                "slice_of_life",
+                "domestic"
+            ],
+            "coherence_anchors": [
+                "love shown through small rituals and routines",
+                "parent suppresses their own reaction to protect child",
+                "child's fear handled with practical redirection not dismissal",
+                "warmth expressed through specific actions not declarations",
+                "internal monologue reveals what the parent cannot say aloud"
+            ],
+            "elimination_criteria": [
+                "parent delivers a perfect speech that resolves the child's fear",
+                "sentimentality that stops the scene's momentum",
+                "child immediately accepts parental reassurance",
+                "domestic details that feel generic rather than specific",
+                "parent loses composure in front of the child without reason"
+            ]
+        },
+        {
+            "scene_id": "post_apocalyptic_abandoned",
+            "tags": [
+                "dystopian_scifi",
+                "post_apocalyptic",
+                "abandoned_world",
+                "political_drama"
+            ],
+            "coherence_anchors": [
+                "world building through what is missing not what is present",
+                "characters treat extraordinary circumstances as mundane",
+                "political systems shown through individual consequence not exposition",
+                "technology or infrastructure described through its failure",
+                "hope expressed obliquely never directly stated"
+            ],
+            "elimination_criteria": [
+                "exposition dumps explaining how the world ended",
+                "characters expressing wonder at their own familiar world",
+                "villain embodying the system without human complexity",
+                "resolution that fully defeats the system",
+                "modern comfort items appearing without explanation"
+            ]
+        },
+        {
+            "scene_id": "body_horror_corruption",
+            "tags": [
+                "body_horror",
+                "psychological_horror",
+                "unreliable_narrator",
+                "grief",
+                "guilt"
+            ],
+            "coherence_anchors": [
+                "corruption shown through specific physical detail not abstract dread",
+                "character rationalizes symptoms before acknowledging them",
+                "identity erosion shown through small behavioral shifts",
+                "moments of clarity surrounded by confusion",
+                "fear of self expressed through anger at others"
+            ],
+            "elimination_criteria": [
+                "character fully accepts their corruption without resistance",
+                "graphic description for shock value without character consequence",
+                "other characters immediately recognize and respond to the change",
+                "corruption reverses cleanly",
+                "protagonist narrates their own deterioration with full clarity"
+            ]
+        },
+        {
+            "scene_id": "solo_atmospheric_observation",
+            "tags": [
+                "solo_atmospheric",
+                "quiet_vulnerability",
+                "internal_monologue"
+            ],
+            "coherence_anchors": [
+                "character revealed through what they notice not what they think",
+                "memory surfaces through sensory detail not explicit recall",
+                "emotional state expressed through physical observation",
+                "silence in the scene carries narrative weight",
+                "no dialogue needed to carry the scene"
+            ],
+            "elimination_criteria": [
+                "character explains their feelings directly to themselves",
+                "another character appearing to fill the silence",
+                "action interrupting before the quiet has settled",
+                "generic atmospheric description without character specificity",
+                "internal monologue that reads as therapy session"
+            ]
+        }
+    ]
+}
