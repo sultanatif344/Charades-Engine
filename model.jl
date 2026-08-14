@@ -34,6 +34,9 @@ function generate_token_by_token(model, prompt::String, max_tokens::Real)
 
     println(typeof(token_list))
     println(typeof(actual_length))
+
+
+
     for pos in 1:actual_length
         current_logits = logits_matrix[pos, 1:end]
         e = entropy(current_logits)
@@ -54,4 +57,10 @@ function generate_token_by_token(model, prompt::String, max_tokens::Real)
     println("Trigger positions: $(state.entropy_tracker.trigger_positions)")
 
     return state, logits_matrix
+end
+
+function reconstruct_prompt_to_position(token_list::Vector{Int64}, model, position::Int)
+    tokens_so_far = token_list[1:position]
+    bytes = model.detokenize(tokens_so_far)
+    return pyconvert(String, bytes.decode("utf-8", errors="replace"))
 end
