@@ -13,6 +13,9 @@ function load_model(model_path::String)
         model_path=model_path,
         n_ctx=512,
         logits_all=true,
+        embedding=true,      # dual flag test
+        n_threads=4,         # generation speed
+        n_threads_batch=8,   # batch speed
         verbose=false
     )
 end
