@@ -86,15 +86,6 @@ function get_relevant_hints(hints::Vector{HintScene}, active_tags::Vector{String
     return HintScene[]
 end
 
-function load_embedding_model(model_path::String)
-    llama_cpp = pyimport("llama_cpp")
-    return llama_cpp.Llama(
-        model_path=model_path,
-        embedding=true,
-        n_ctx=512,
-        verbose=false
-    )
-end
 
 function get_embedding(embed_model, text::String, cache::Union{Dict{String,Vector{Float32}},Nothing}=nothing)
     if cache !== nothing && haskey(cache, text)
@@ -385,11 +376,24 @@ function charades(model, prompt::String, logits_at_position::Vector{Float32},
     scores = softmax_combined_score(results)
     best = results[argmax(scores)]
 
-    winner_coherence_too_low = best.coherence_score < 0.01 && best.post_decision_slope < -0.5
+    winner_coherence_too_low = best.coherence_score < 0.0 && best.post_decision_slope < -0.2
 
     if winner_coherence_too_low
-        println("⚠️  Winner confidently wrong territory - triggering graceful degradation")
-        return nothing, Float32[], results
+        println("⚠️  Winner confidently wrong - trying next best candidate")
+
+        # Filter out the bad winner
+        valid_results = filter(r -> !(r.coherence_score < 0.0 &&
+                                      r.post_decision_slope < -0.2), results)
+
+        if isempty(valid_results)
+            println("⚠️  No valid candidates - graceful degradation")
+            return nothing, Float32[], results
+        end
+
+        # Pick best from remaining
+        valid_scores = softmax_combined_score(valid_results)
+        best = valid_results[argmax(valid_scores)]
+        println("  Fallback winner: '$(best.token_text)'")
     end
 
     for (r, s) in zip(results, scores)

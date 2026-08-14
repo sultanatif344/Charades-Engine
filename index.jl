@@ -5,16 +5,15 @@ include("profiler.jl")
 include("visualizer.jl")
 
 model = load_model("C:\\Users\\LENOVO\\Personal\\AI Models\\witty_v4.gguf")
-embed_model = load_embedding_model("C:\\Users\\LENOVO\\Personal\\AI Models\\witty_v4.gguf")
 
 hints = load_hints("hints.json")
 cache = HintCache()
-precompute_hint_embeddings!(cache, hints, embed_model)
+precompute_hint_embeddings!(cache, hints, model)
 
 profiler = Profiler()
 println("Loaded $(length(hints)) hint scenes")
 
-prompt = "def calculate_gradient(weights, learning_rate=0.01):"
+prompt = "The door opened slowly, neither of them spoke"
 
 t1 = @elapsed state, logits = generate_token_by_token(model, prompt, 1)
 println("  Entropy scan:     $(round(t1, digits=2))s")
@@ -40,7 +39,7 @@ for pos in triggers
 
     t2 = @elapsed winner, trajectory, candidates = charades(
         model, partial_prompt, uncertain_logits,
-        active_tags, hints, embed_model, cache, :any
+        active_tags, hints, model, cache, :any
     )
     println("  Charades eval pos $pos: $(round(t2, digits=2))s")
 
