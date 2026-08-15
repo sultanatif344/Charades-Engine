@@ -5,7 +5,11 @@ include("profiler.jl")
 include("api.jl")
 # include("visualizer.jl")
 
-model = load_model("C:\\Users\\LENOVO\\Personal\\AI Models\\witty_v4.gguf")
+model_path = get(ENV, "WITTY_MODEL_PATH",
+    "C:\\Users\\LENOVO\\Personal\\AI Models\\witty_v4.gguf")
+
+println("Loading model from: $model_path")
+model = load_model(model_path)
 
 hints = load_hints("hints.json")
 cache = HintCache()
