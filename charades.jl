@@ -2,7 +2,9 @@ using Statistics
 using JSON3
 
 const N_CANDIDATES = 3
-const MAX_CANDIDATE_TOKENS = 25
+const MAX_CANDIDATE_TOKENS = 10
+const MAX_TRIGGERS = 3
+
 const HINTS_PATH = "hints.json"
 
 

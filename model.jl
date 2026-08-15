@@ -11,7 +11,7 @@ function load_model(model_path::String)
     llama_cpp = pyimport("llama_cpp")
     return llama_cpp.Llama(
         model_path=model_path,
-        n_ctx=512,
+        n_ctx=4096,
         logits_all=true,
         embedding=true,      # dual flag test
         n_threads=4,         # generation speed
