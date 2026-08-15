@@ -1,3 +1,5 @@
 *.so
 *.png
 loader.jl
+*.toml
+*.log
