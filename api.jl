@@ -13,9 +13,18 @@ function extract_prompt(body::JSON3.Object)
     println("📨 Message count: $(length(messages))")
     println("📨 Last message role: $(messages[end]["role"])")
 
+    # Keep system prompt + last 6 messages only
+    system_msgs = filter(m -> m["role"] == "system", collect(messages))
+    non_system = filter(m -> m["role"] != "system", collect(messages))
+
+    # Take only recent messages
+    recent = non_system[max(1, length(non_system)-5):end]
+
+    trimmed = vcat(system_msgs, recent)
+
     # Build full conversation context
     parts = String[]
-    for msg in messages
+    for msg in trimmed
         role = msg["role"]
         content = msg["content"]
         if role == "system"
